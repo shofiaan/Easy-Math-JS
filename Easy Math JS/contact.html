@@ -1,0 +1,133 @@
+<html lang="en" dir="ltr">
+  <head>
+    <title>Math Geometry</title>
+  </head>
+  <style media="screen">
+    #box{
+      margin:0 auto;
+      margin-top: 150px;
+      margin-bottom:100px;
+      padding-top:40px;
+      padding-left:40px;
+      padding-right:40px;
+      padding-bottom:40px;
+      width:500px;
+      height:630px;
+      background-color:rgba(255, 153, 0, 0.8);
+      align-items: center;
+      border-radius: 20px;
+    }
+    body {
+      background-image: url('pict/1.jpg');
+    }
+    .nama{
+      font-family:Times New Roman;
+      font-size: 15px;
+      width:99.7%;
+      padding: 13px 10px;
+      margin: 5px 0px;
+      background-color: #dbdbdb;
+      border: 3px solid lime;
+      color: #757575;
+      transition: all 0.7s;
+    }
+    .email{
+      font-family:Times New Roman;
+      font-size: 15px;
+      width: 99.7%;
+      padding: 13px 10px;
+      margin: 5px 0px;
+      background-color: #dbdbdb;
+      border: 3px solid lime;
+    }
+    .help{
+      font-family:Times New Roman;
+      font-size: 15px;
+      width:99.7%;
+      padding: 13px 10px;
+      margin: 5px 0px;
+      background-color: #dbdbdb;
+      border: 3px solid lime;
+    }
+    .yes{
+      width: 99.7%;
+      font-size: 19px;
+      color: #f5f5f5;
+      padding: 13px 10px;
+      margin: 5px 0px;
+      background-color:#32CD32;
+      border: none;
+    }
+    .yes:hover{
+      background-color:yellow;
+      cursor:pointer;
+    }
+    </style>
+  <script type="text/javascript">
+    function validation(form){
+      if(form.name.value==""){
+        alert("Please enter the name");
+        return (false);
+      }
+      if(checkText(form.name) == false){
+        alert ("Name should contain letter");
+        return false;
+      }
+      if(form.pass.value==""){
+        alert("Please enter your Email");
+        return(false);
+      }
+      if(form.c.value==""){
+        alert("Please enter your Suggestion");
+        return(false);
+      }
+      else{
+        alert("Thank you for your suggestion")
+        return validation(clear);
+      }
+
+        return send1();
+    }
+
+      function send1(){
+        alert("Input again");
+        return false;
+      }
+
+    function checkText(textBox){
+            if( textBox.value.length != 0){
+              for (var i = 0; i < textBox.value.length;i++){
+                var ch= textBox.value.charAt(i);
+                if((ch < "A" || ch > "Z") && (ch< "a" || ch >"z")){
+                  return false;
+                }
+              }
+            }
+            else {
+              return true;
+            }
+          }
+  </script>
+  <body>
+    <div id="box">
+      <h1><strong><center>Suggestion Form</center></strong></h1>
+      <h2><center>Let's be better together, become this website more benefit for all people</center></h2>
+    <form name="checkText" onSubmit="return validation(this)" target="contact,top" action="project.html">
+      Name:
+      <br>
+      <input class="nama" type="text" name="name" >
+      <p>
+      Email:
+      <br>
+      <input class="email" type="text" name="pass">
+      <p>
+      Suggestion:
+      <br>
+      <textarea name="c" rows="5" cols="48" input class="help" type="text"></textarea>
+      <p>
+      <br>
+      <input class="yes" type=submit name="d" value="SEND">
+    </form>
+  </div>
+  </body>
+</html>

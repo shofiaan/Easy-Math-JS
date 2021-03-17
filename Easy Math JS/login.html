@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Foodieh Indonesia</title>
+    <link rel="icon" type="image/png" href="gambar/logo.png">
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="masuk.css">
+</head>
+<script type="text/javascript">
+function validation(form){
+      if(form.name.value==""){
+        alert("Please enter the name");
+        return (false);
+      }
+      if(checkText(form.name) == false){
+        alert ("First Name should contain letter");
+        return false;
+      }
+      if(form.pass.value==""){
+        alert("Please enter the password");
+        return(false);
+      }
+
+      if(form.pass.value == '12345'){
+        alert ("Hello...!");
+        return validation(clear);
+      }
+
+        return send1();
+    }
+
+      function send1(){
+        alert("Wrong Password");
+        return false;
+      }
+
+
+    function checkText(textBox){
+            if( textBox.value.length != 0){
+              for (var i = 0; i < textBox.value.length;i++){
+                var ch= textBox.value.charAt(i);
+                if((ch < "A" || ch > "Z") && (ch< "a" || ch >"z")){
+                  return false;
+                }
+              }
+            }
+            else {
+              return true;
+            }
+          }
+
+
+</script>
+<body>
+
+  <body>
+
+    <div id="login">
+      <div class="center">
+
+          <form name="checkText" onsubmit="return validation(this)" action="project.html" target="login.html">
+            <h2>Login Code User</h2>
+            <p align="center"><img src="pict/l.png" alt="log in"></p>
+            <input class="itpw" type="text" name="name" placeholder="Username or Email"><br>
+            <input class="itpw" type="password" name="pass" placeholder="Password"><br>
+            <input class="its" type="submit" name="login" value="LOGIN">
+          </form>
+
+          <p><a href="#">Forget your password ?</a> | <a href="#">Created an account</a>  </p>
+
+      </div>
+    </div>
+    <footer class="primary-footer container group">
+
+            <small>&copy; Math Geometry</small>
+
+            <nav class="nav">
+              <a href="index.html" target="home.html">Home</a>
+              <a href="project.html" target="home.html">Count Now</a>
+              <a href="masuk.html" target="home.html">Sign In</a>
+            </nav>
+
+    </footer>
+  </body>
+</html>

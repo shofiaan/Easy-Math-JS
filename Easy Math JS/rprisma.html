@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Kalkulator Sederhana</title>
+</head>
+<style media="screen">
+.itpw {
+  width: 99%;
+  padding: 13px 10px;
+  margin: 5px 0px;
+  background-color: #dbdbdb;
+  border: 3px solid #dbdbdb;
+  color: #757575;
+  transition: all 0.7s;
+}
+
+.its {
+  width: 99%;
+  font-size: 19px;
+  color: #f5f5f5;
+  padding: 12px;
+  margin: 5px 0;
+  background-color:#32CD32;
+  border: none;
+  transition: all 0.4s;
+}
+
+.itpw:focus {
+  border-bottom: 3px solid #004d40;
+  color: #004d40
+}
+
+.its:hover , .its:focus {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.its {
+  width: 50%;
+}
+
+.itpw {
+  font-size: 14px;
+  width: 50%;
+  padding: 13px 3%;
+}
+#a{
+  width: 50px;
+  height: 30px;
+  background-color: lime;
+}
+#b{
+  width: 80px;
+  height: 30px;
+  background-color: lime;
+}
+button:hover{
+  color: yellow;
+  cursor: pointer;
+}
+body{
+  background-image:url('pict/1.jpg');
+}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+
+<!--
+
+function hitung(){
+
+var myForm = document.form1;
+var x=eval(myForm.x.value);
+var y=eval(myForm.y.value);
+var z=eval(myForm.z.value);
+var hasil=(1/2*(x*y*z));
+
+
+ myForm.hasil.value = hasil;
+ myForm.x.value = "";
+ myForm.y.value = "";
+ myForm.z.value="";
+}
+function resetForm(){
+document.form1.reset();
+}
+
+//-->
+
+</script>
+<body>
+<div align="center">
+<form name="form1" action="#">
+  <h1>Let's Count</h1>
+  <input class="itpw" placeholder="Alas Segitiga"type="text" name="x" />
+  <input class="itpw" placeholder="Tinggi Segitiga"type="text" name="y" />
+  <input class="itpw" placeholder="Tinggi Prisma"type="text" name="z" />
+  <br>
+  <button id="a" onClick="hitung()">=</button>
+  <button id="b" onClick="resetForm()">CLEAR</button>
+  <br>
+  <input class="itpw" placeholder="Hasil"type="text" name="hasil" disabled="true" />
+
+</form>
+</body>
+</html>

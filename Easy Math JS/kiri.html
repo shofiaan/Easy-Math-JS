@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="screen">
+    h1{
+      font-family: Garamond, serif;
+      font-size: 43px;
+      color:white;
+    }
+    body{
+      background-image: url('pict/1.jpg');
+    }
+    img{
+      width:250px;
+      height:200px;
+
+    }
+    a{
+      color:brown;
+      text-decoration: none;
+      text-transform:uppercase;
+    }
+    a:hover{
+      color:white;
+    }
+  </style>
+
+</head>
+  <script>
+  var random_images_array = ['1.png', '2.png', '3.png', '4.png','5.gif'];
+
+  function getRandomImage(imgAr, path) {
+      path = path || 'display/'; // default path here
+      var num = Math.floor( Math.random() * imgAr.length );
+      var img = imgAr[ num ];
+      var imgStr = '<img src="' + path + img + '" alt = "">';
+      document.write(imgStr); document.close();
+  }
+
+  </script>
+<body>
+<h1>Menu</h1>
+<a href="index.html" target="bottomright, kiri, top" >Home</a>
+  <br>
+  <a href="masuk.html" target="bottomright, kiri, top">Log in</a>
+  <br>
+  <a href="project.html" target="bottomright, kiri, top">Volume Counter</a>
+  <br>
+  <a href="cp.html" target="bottomright, kiri, top">Contact Person</a>
+  <br>
+  <a href="about.html" target="bottomright, kiri, top">About Me</a>
+  <br>
+  <div>
+      <!-- This script segment displays an image from the array -->
+      <script type="text/javascript">getRandomImage(random_images_array, 'display/')</script>
+  </div>
+
+
+
+</body
+</html>
